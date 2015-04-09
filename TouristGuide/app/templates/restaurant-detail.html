@@ -1,0 +1,17 @@
+<ion-view view-title="{{restaurant.name}}">
+  <ion-content class=padding">
+      <div class="item item-thumbnail-left">
+        <img ng-src="{{restaurant.image}}" alt="No Image">
+        <h2>{{restaurant.name}}</h2>
+        <p>{{restaurant.address}}</p>
+        <p>{{restaurant.city}}</p>
+        <div id="favHeart">
+          <img ng-src="{{restaurant.favorite && 'images/ios7-heart.png' || 'images/ios7-heart-outline.png'}}" ng-click="favoriteRes()">
+        </div>
+        <p>{{restaurant.phone}}</p>
+        <p>Category: {{restaurant.category}}</p>
+        <img ng-src="{{restaurant.ratingImage}}" alt="No Rating"><br>
+        <button ng-click="showRoute()">Show route</button>
+      </div>
+  </ion-content>
+</ion-view>

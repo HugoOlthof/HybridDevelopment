@@ -1,0 +1,19 @@
+<ion-view view-title="Tourist Guide">
+  <ion-content>
+
+    <div class="has-header padding row" align="center">
+      <div class="col">
+        <div id="photoLeft">
+          <img ng-repeat="p in photosLeft" ng-src="{{p.url}}" ng-click="showConfirm(p)">
+        </div>
+
+      </div>
+      <div class="col">
+        <div id="photoRight">
+          <img ng-repeat="ph in photosRight" ng-src="{{ph.url}}" ng-click="showConfirm(ph)">
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

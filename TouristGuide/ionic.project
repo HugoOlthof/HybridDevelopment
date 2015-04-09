@@ -1,0 +1,11 @@
+{
+  "name": "TouristGuide",
+  "app_id": "cd4556fd",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "11.40.277.1"
+    }
+  ]
+}

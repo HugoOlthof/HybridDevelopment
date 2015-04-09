@@ -1,0 +1,34 @@
+<ion-view title="Tourist Guide">
+
+  <ion-content class="has-header">
+
+    <div class="padding" align="center">
+      <button class="button button-block button-assertive" ng-click="changeView()">{{buttonText}}</button>
+    </div>
+
+    <div ng-show="show" ng-repeat="r in restFavorites track by $index" type="item-text-wrap" >
+      <a class="item item-thumbnail-left" href="#/tab/favorites/{{r.id}}">
+        <img ng-src="{{r.image}}" alt="No Image">
+        <h2>{{r.name}}</h2>
+        <p>{{r.city}}</p>
+        <p>{{(r.distance / 1000).toFixed(1) + " km"}}</p>
+        <img ng-src="{{r.ratingImage}}" alt="No Rating">
+      </a>
+    </div>
+
+    <div ng-show="!show" class="has-header row" align="center">
+      <div class="col">
+        <div id="photoLeft">
+          <img ng-repeat="p in photFavoritesLeft" ng-src="{{p.url}}" ng-click="showConfirm(p)">
+        </div>
+
+      </div>
+      <div class="col">
+        <div id="photoRight">
+          <img ng-repeat="ph in photFavoritesRight" ng-src="{{ph.url}}" ng-click="showConfirm(ph)">
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
